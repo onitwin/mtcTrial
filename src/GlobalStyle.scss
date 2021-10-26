@@ -1,0 +1,94 @@
+// @mixin borders {
+//   border: 1px solid black;
+// }
+
+// @mixin colorA {
+//   color: gold;
+// }
+
+// @mixin colorB {
+//   color: rebeccapurple;
+// }
+
+// @mixin style-h1 {
+//   @include borders;
+//   @include colorA;
+// }
+
+// .wow {
+//   @include style-h1;
+// }
+
+// @mixin style-h2 {
+//   @include borders;
+//   @include colorB;
+// }
+
+// .hey {
+//   @include style-h2;
+// }
+
+//examples above for own clarification and learning;
+// html,
+// body {
+//   height: 100%;
+// }
+
+//created for sticky footer
+.out-most-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+/////////Navbar Styling////////////////
+
+/////////HeaderContainer Styling////////////////
+
+@mixin banner-style {
+  z-index: 2;
+  height: 65vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 75%;
+  opacity: 0.5;
+}
+
+.banner-image-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.banner-image {
+  @include banner-style;
+  background-image: url(./images/kitchenBanner1.png);
+}
+
+.banner-background-color {
+  z-index: 1;
+  background-color: black;
+  height: 65vh;
+  width: 100%;
+  position: absolute;
+}
+
+@media only screen and (max-width: 700px) {
+  .banner-image {
+    height: 30vh;
+  }
+}
+
+/////////CentralContainer Styling////////////////
+
+/////////TestimonialsContainer Styling////////////////
+
+/////////GalleryContainer Styling////////////////
+
+/////////FooterContainer Styling////////////////

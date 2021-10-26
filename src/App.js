@@ -1,18 +1,24 @@
-import "./App.css";
+import "./GlobalStyle.scss";
 import CentralContainer from "./containers/CentralContainer";
 import GalleryContainer from "./containers/GalleryContainer";
 import HeaderContainer from "./containers/HeaderContainer";
 import NavBar from "./containers/Navbar";
 import TestimonialsContainer from "./containers/TestimonialsContainer";
+import FooterContainer from "./containers/FooterContainer";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <HeaderContainer />
-      <CentralContainer />
-      <TestimonialsContainer />
-      <GalleryContainer />
+    <div className="out-most-wrapper">
+      <div className="content">
+        <NavBar />
+        <HeaderContainer />
+        <CentralContainer />
+        <TestimonialsContainer />
+        <GalleryContainer />
+      </div>
+      <footer>
+        <FooterContainer />
+      </footer>
     </div>
   );
 }
