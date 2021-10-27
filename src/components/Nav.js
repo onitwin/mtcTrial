@@ -13,8 +13,8 @@ const Nav = () => {
         </div>
         <img src="/svg/mk.svg" />
         <div className="nav-zone2">
-          <p>shop</p>
-          <p>plan my kitchen</p>
+          <p>about us</p>
+          <p>gallery</p>
         </div>
         <StandardButton text="my order" alt="order-btn" />
       </div>

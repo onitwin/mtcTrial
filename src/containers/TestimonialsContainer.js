@@ -1,6 +1,13 @@
 import React from "react";
+import TestimonialsTextBlock from "../components/TestimonialsTextBlock";
 
 const TestimonialsContainer = () => {
-  return <p>Hello from the testimonials container</p>;
+  return (
+    <div className="testimonials-wrap">
+      <img src="/svg/leftArrow.svg" />
+      <TestimonialsTextBlock />
+      <img src="/svg/rightArrow.svg" />
+    </div>
+  );
 };
 export default TestimonialsContainer;

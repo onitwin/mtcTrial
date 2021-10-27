@@ -37,7 +37,7 @@ footer {
   padding: 0.8rem 2.5rem;
   text-align: center;
   text-transform: uppercase;
-  font-size: 7px;
+  font-size: 9px;
   letter-spacing: 2px;
   font-family: "Roboto Regular", arial;
 }
@@ -55,6 +55,9 @@ footer {
   background-color: $gold-spot;
   background-color: none;
 }
+.main-btn:hover {
+  background-color: #c8a74b;
+}
 
 .order-btn {
   @include button-style;
@@ -62,10 +65,12 @@ footer {
   background-color: transparent;
   border: 1px solid $main-white;
   margin: 0;
+  z-index: 6;
 }
 
 .order-btn:hover {
   background-color: $gold-spot;
+  color: $main-white;
 }
 
 @mixin titles {
@@ -76,12 +81,13 @@ footer {
 @mixin mini-title {
   color: $gold-spot;
   font-family: "Roboto Regular", arial;
+  text-transform: uppercase;
 }
 
 /////////Navbar Styling////////////////
 
 nav {
-  position: fixed;
+  position: absolute;
   z-index: 3;
   width: 100%;
   height: 5rem;
@@ -219,7 +225,6 @@ nav {
 .central-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0;
 }
 
 .central-block-image {
@@ -231,6 +236,20 @@ nav {
   padding-left: 3rem;
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 930px) {
+  .central-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .central-block {
+    margin: 2rem;
+  }
+
+  .main-btn {
+    margin-bottom: 2rem;
+  }
 }
 
 .central-block {
@@ -252,7 +271,92 @@ nav {
 }
 
 /////////TestimonialsContainer Styling////////////////
+.testimonials-wrap {
+  display: flex;
+  background-color: $off-white;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+
+.testimonials-block-wrap {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 30rem;
+  vertical-align: middle;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  .testimonials-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .main-btn {
+      width: unset;
+    }
+  }
+  article {
+    color: $alt-grey;
+    font-size: small;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+
+.testimonials-block-mini-title {
+  @include mini-title;
+  margin: 0;
+}
+
+.testimonials-block-title {
+  @include titles;
+  text-align: center;
+}
 
 /////////GalleryContainer Styling////////////////
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $dark-grey;
+}
+
+.gallery-title {
+  font-family: Helvetica, sans-serif;
+  font-size: x-large;
+}
+.gallery-wrap {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media screen and(max-width:1200px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and(max-width:900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and(max-width:700px) {
+  .gallery-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 /////////FooterContainer Styling////////////////

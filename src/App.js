@@ -10,7 +10,6 @@ function App() {
   return (
     <div className="out-most-wrapper">
       <div className="content">
-        <NavBar />
         <HeaderContainer />
         <CentralContainer />
         <TestimonialsContainer />
