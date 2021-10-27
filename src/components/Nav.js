@@ -1,14 +1,23 @@
 import React from "react";
 import SocialNav from "./SocialNav";
+import StandardButton from "./StandardButton";
 
 const Nav = () => {
   return (
     <nav>
-      <ul>
-        <li>
-          <SocialNav />
-        </li>
-      </ul>
+      <div className="nav-wrap">
+        <SocialNav />
+        <div className="nav-zone1">
+          <p>shop</p>
+          <p>plan my kitchen</p>
+        </div>
+        <img src="/svg/mk.svg" />
+        <div className="nav-zone2">
+          <p>shop</p>
+          <p>plan my kitchen</p>
+        </div>
+        <StandardButton text="my order" alt="order-btn" />
+      </div>
     </nav>
   );
 };
