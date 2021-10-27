@@ -4,7 +4,7 @@ $main-black: #000;
 $dark-grey: #222;
 $off-white: #eee;
 $alt-grey: #777;
-
+$robo: "Roboto Regular", arial;
 //created for sticky footer
 html {
   box-sizing: border-box;
@@ -60,12 +60,22 @@ footer {
   @include button-style;
   background-color: none;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid $main-white;
   margin: 0;
 }
 
 .order-btn:hover {
   background-color: $gold-spot;
+}
+
+@mixin titles {
+  font-family: "Roboto Regular", arial;
+  color: $dark-grey;
+}
+
+@mixin mini-title {
+  color: $gold-spot;
+  font-family: "Roboto Regular", arial;
 }
 
 /////////Navbar Styling////////////////
@@ -206,6 +216,40 @@ nav {
 }
 
 /////////CentralContainer Styling////////////////
+.central-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+.central-block-image {
+  width: 100%;
+}
+
+.central-block-wrap {
+  width: 60%;
+  padding-left: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.central-block {
+  display: block;
+  article {
+    color: $alt-grey;
+    font-size: small;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+}
+.central-block-mini-title {
+  @include mini-title;
+}
+
+.central-block-title {
+  @include titles;
+}
 
 /////////TestimonialsContainer Styling////////////////
 
