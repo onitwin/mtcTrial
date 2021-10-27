@@ -73,7 +73,6 @@ footer {
 nav {
   position: fixed;
   z-index: 3;
-  border: 1px solid red;
   width: 100%;
   height: 5rem;
   display: flex;
@@ -83,23 +82,31 @@ nav {
 
 .nav-wrap {
   width: 80vw;
-  border: 1px solid gold;
+  padding-bottom: 1rem;
+  border-bottom: 0.2rem solid $main-white;
+  border-width: thin;
   display: inline-flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.social-icon-wrap {
-  border: 3px solid blue;
-}
 .social-icon {
   height: 0.8rem;
   width: 0.8rem;
+  margin: 0 0.2rem;
 }
 
 @mixin navzone {
   display: flex;
-  border: 2px solid green;
+  font-family: "Roboto Regular", arial;
+  color: $main-white;
+  font-size: 8px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  width: 10rem;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
   @media only screen and (max-width: 700px) {
     color: gold;
   }
@@ -191,6 +198,10 @@ nav {
 
   .main-btn {
     @include responsive-btn;
+  }
+
+  nav {
+    display: none;
   }
 }
 
